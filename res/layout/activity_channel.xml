@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    tools:context="com.example.testpulltofresh.activity.ChannelActivity" >
+
+    <!-- 频道界面的顶部 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        >
+        
+        <!-- 返回按钮 -->
+       <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_back"
+                />
+	        
+       <!-- 频道标题 -->
+        <TextView 
+            	android:id="@+id/tv_channel"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:layout_centerInParent="true"
+        	    android:text="学霸养成记"
+        	    android:textColor="#50b3fa"
+            	android:textSize="22sp"/>      
+    </RelativeLayout>
+    
+    <!-- 分隔线 -->
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:src="#e8e8e8"/>
+    
+    <!-- 显示频道中日程的listview，采用的是第三方的PullToRefresh控件 -->
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/ptflv_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+	    android:scrollbars="none">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>  
+</LinearLayout>

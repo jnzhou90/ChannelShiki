@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_channel_listitem"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <!-- 用户头像 -->
+            <ImageView 
+                android:id="@+id/iv_user_head"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+				android:layout_margin="9dp"
+				android:layout_gravity="center_vertical"
+				android:scaleType="centerCrop"
+                android:src="@drawable/logo"/>
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical">
+                
+                <!-- 用户姓名 -->               
+                <TextView 
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开贝塔的坦克"      
+                    android:textColor="#7a7c80"
+                    android:layout_weight="1"              
+                    android:drawableRight="@drawable/man"
+                    android:drawablePadding="5dp"/>
+                
+                <!-- 发送的时间 -->
+                <TextView 
+                    android:id="@+id/tv_send_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1分钟前"                  
+                    style="@style/channel_gray_font"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <!-- 日程内容 -->
+        <TextView 
+            android:id="@+id/tv_schedule_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="每天睡觉背单词!!"
+            style="@style/channel_black_font"
+            android:padding="9dp"/>
+       <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp">
+            
+           <!-- 日程提醒的时间 -->
+            <TextView 
+                android:id="@+id/tv_remind_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:drawableLeft="@drawable/time"
+                android:drawablePadding="5dp"
+                android:text="每天    22:00"
+                style="@style/channel_gray_font"/>
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="13dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:orientation="horizontal">
+            
+            <!-- 关注人数 -->
+            <TextView 
+                android:id="@+id/tv_attention_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"             
+                android:drawableLeft="@drawable/attention"
+                android:drawablePadding="5dp"
+                android:text="600人关注"
+                style="@style/channel_gray_font"/>
+            
+            <!-- 记录数 -->
+            <TextView 
+                android:id="@+id/tv_record_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="1000条记录"
+                android:drawableLeft="@drawable/record"
+                android:drawablePadding="5dp"
+                style="@style/channel_gray_font"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

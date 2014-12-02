@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        >	
+        
+        <!-- 频道头像 -->
+        <ImageView 
+            android:id="@+id/iv_channel_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/channel_head"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"            
+            />
+        
+        <!-- ListView的头部，包含频道具体信息-->
+        <LinearLayout 
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="90dp"
+            >
+            
+            <!-- 频道标题 -->
+            <TextView 
+                android:id="@+id/tv_channel_details"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:paddingTop="18dp"
+        	    android:text="学霸养成记-我要当学霸"
+        	    style="@style/channel_black_font"/>
+            
+            <!-- 日程表说明 -->
+            <TextView 
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:paddingTop="7dp"
+        	    android:paddingBottom="12dp"
+        	    android:text="日程表说明"
+        	    android:textColor="#b4b4b4"
+            	android:textSize="12sp"/>
+        </LinearLayout>
+        <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+				android:layout_centerVertical="true"
+                android:src="@drawable/btn_schedule_details"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                />
+    </RelativeLayout>
+    
+    
+    <!--日程，看看未来发生什么-->
+    <LinearLayout android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    >
+	    <ImageView 
+	        android:layout_width="3dp"
+	        android:layout_height="fill_parent"
+	        android:paddingTop="2dp"
+	        android:paddingBottom="2dp"
+	        android:layout_marginLeft="9dp"
+	        android:src="#646873"/>
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="5dp"
+	        android:textColor="#646873"
+	        android:text="日程  ·  "/>
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="看看未来会发些什么"
+	        android:layout_gravity="center_vertical"
+	        android:textSize="12sp"
+	        android:textColor="#bec0c3"/>
+	</LinearLayout>
+
+</LinearLayout>
